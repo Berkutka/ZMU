@@ -1,0 +1,877 @@
+# PROJECT BRIEF — ZUSAMMEN MIT DER UKRAINE e.V.
+## Static Website Redesign — Phase 1
+
+**Role:** Senior Creative Frontend Developer + UI/UX Designer + Motion Designer
+
+**Project:** Complete visual redesign of https://www.zusammen-mit-der-ukraine.de/
+
+**Primary language:** German (Deutsch)
+
+**Design direction:** Balanced / Modern Editorial / Human-centered
+
+**Animation level:** Rich — mouse interactions, parallax, scroll-triggered animations.
+
+**Deployment target:** GitHub Pages first, later integration into a production web server and backend.
+
+---
+
+# 1. MAIN OBJECTIVE
+
+Create a completely redesigned, modern, visually sophisticated and interactive website for "Zusammen mit der Ukraine e.V."
+
+This must NOT look like a standard nonprofit template, a generic corporate landing page, or a static business card.
+
+The website should feel like a high-quality digital experience created by a professional creative digital agency.
+
+The visual identity should communicate:
+
+- Human connection.
+- Cultural diversity.
+- Education and opportunity.
+- Community and solidarity.
+- Trust, openness and professionalism.
+- A positive vision for the future.
+
+The site must be visually engaging without sacrificing readability, usability, accessibility or performance.
+
+IMPORTANT: Do not copy reference websites. Use their interaction patterns and design principles as inspiration, while creating an original visual identity for this organization.
+
+# 2. REFERENCE WEBSITES
+
+Study these websites before implementation.
+
+### Reference A — Gianpaolo Tucci
+https://www.gianpaolotucci.com/work.html
+
+Study:
+- Color transitions on hover.
+- Background colors reacting to the hovered image/project.
+- Editorial composition.
+- Image and typography relationship.
+- Subtle transitions.
+
+Desired implementation:
+When a visitor hovers over a project image, its surrounding section should smoothly transition to a color associated with that image.
+
+The color can be configured per project or extracted from the image during initialization.
+
+### Reference B — GZB
+https://www.gzb.nl/
+
+Study:
+- Color combinations.
+- Asymmetric layouts.
+- Different content block proportions.
+- Visual hierarchy.
+- Large editorial imagery.
+- Interesting section compositions.
+
+Desired implementation:
+Use an editorial grid rather than repetitive identical cards.
+
+### Reference C — Mandelo Agency
+https://www.mandelo.agency/
+
+Study:
+- Mouse-responsive hero elements.
+- Layered image movement.
+- Scroll animations.
+- Image transitions.
+- Depth and parallax.
+
+Desired implementation:
+The hero section should contain several independently moving visual elements that respond smoothly to mouse movement.
+
+### Reference D — Hadi Community
+https://hadi-community.de/
+
+Study specifically:
+- `.u-layout`
+- `.creatives_layout`
+
+Inspect the actual layout, positioning and responsive behavior.
+
+Desired implementation:
+Create an original asymmetric image/content composition inspired by these layout principles.
+
+Do not copy their HTML, CSS, images or branding.
+
+# 3. DESIGN DIRECTION
+
+Selected design direction: BALANCED.
+
+The website must look modern, elegant and spacious.
+
+Avoid:
+- Excessive visual noise.
+- Overly dark backgrounds.
+- Neon colors.
+- Excessive gradients.
+- Generic Bootstrap-style layouts.
+- Too many rounded cards.
+- Excessive glassmorphism.
+- Constant movement everywhere.
+
+Use:
+- Warm neutral backgrounds.
+- Muted natural accent colors.
+- Large editorial typography.
+- Generous whitespace.
+- Asymmetric grids.
+- Large photographs.
+- Clear visual hierarchy.
+- Carefully controlled motion.
+
+## 3.1 Color palette
+
+Use these initial design tokens:
+
+- Background: #EEECE3
+- Primary dark green: #243D37
+- Muted blue: #547A9C
+- Coral: #E77C5C
+- Warm yellow: #E4BC63
+- White: #FFFFFF
+- Secondary text: #68716C
+
+The palette must feel sophisticated rather than colorful or playful.
+
+Use the warm neutral background as the dominant color.
+
+Suggested distribution:
+- 65% neutral backgrounds.
+- 20% dark green / dark typography.
+- 10% muted blue.
+- 5% coral and yellow accents.
+
+Use colors consistently through CSS variables.
+
+## 3.2 Typography
+
+Use Google Fonts:
+
+- Manrope — body text, navigation, buttons.
+- Space Grotesk — headlines and display typography.
+
+Typography must be responsive using clamp().
+
+Headlines should be large and confident but not excessively oversized.
+
+Maintain excellent readability.
+
+## 3.3 Layout
+
+Use:
+- Maximum content width around 1440px.
+- Responsive 12-column grid on desktop.
+- Flexible asymmetric layouts.
+- Generous vertical spacing.
+- Consistent spacing scale.
+- Different image aspect ratios.
+- Responsive layouts for tablet and mobile.
+
+Avoid repetitive three-column card layouts.
+
+# 4. WEBSITE STRUCTURE
+
+Build the first version as a polished single-page website.
+
+Use the following sections in this order.
+
+## SECTION 01 — NAVIGATION
+
+Create a minimal and elegant navigation.
+
+Elements:
+- Organization logo/name.
+- Über uns.
+- Handlungsfelder.
+- Projekte.
+- Aktuelles.
+- Mitmachen.
+- Kontakt.
+- Language indicator: DE.
+
+Behavior:
+- Sticky navigation.
+- Transparent or neutral background initially.
+- Background changes subtly when scrolling.
+- Smooth anchor navigation.
+- Mobile navigation with animated menu.
+- Clear focus and hover states.
+
+Use the organization's existing name and logo where available.
+
+## SECTION 02 — HERO
+
+Main headline:
+
+"Brücken bauen.
+Zukunft gestalten."
+
+Supporting text:
+
+"Wir sind ein Netzwerk aus Menschen verschiedener Nationen. Gemeinsam engagieren wir uns für Bildung, humanitäre Hilfe und den kulturellen Dialog in Stuttgart und darüber hinaus."
+
+Primary CTA:
+"Unsere Projekte entdecken"
+
+Secondary CTA:
+"Partner werden"
+
+Visual direction:
+- Large editorial headline.
+- Warm neutral background.
+- 3–5 overlapping or asymmetrically arranged photographs.
+- Organic but restrained composition.
+- Small decorative labels and visual details.
+- Clear and prominent CTAs.
+
+Interactions:
+- Subtle mouse-responsive image movement.
+- Different parallax intensity for different layers.
+- Smooth image reveal on initial load.
+- Gentle headline entrance animation.
+- No excessive motion.
+
+The headline must remain readable at all times.
+
+## SECTION 03 — INTRODUCTION / IMPACT
+
+Headline:
+
+"Menschen. Geschichten. Veränderung."
+
+Present the organization and its impact.
+
+Use the existing information about:
+- 500+ betreute Familien.
+- 100% Ehrenamt.
+
+IMPORTANT:
+These figures must be checked against the source and treated as existing content, not newly generated statistics. Make them easy to update.
+
+Visual direction:
+- Large typography.
+- Asymmetric layout.
+- Large statistic blocks.
+- One supporting photograph.
+- Elegant number count-up animations when the section enters the viewport.
+
+Do not invent additional statistics.
+
+## SECTION 04 — OUR MISSION / HANDLUNGSFELDER
+
+Headline:
+
+"Gemeinsam mehr bewegen."
+
+Present the three strategic areas:
+
+1. Bildung & Kompetenz
+2. Integration & Antidiskriminierung
+3. Digitale & Soziale Innovation
+
+Each area should have:
+- Relevant photograph or visual.
+- Short description based on the original website.
+- Clear visual title.
+- Link or CTA where an original destination exists.
+
+Visual direction:
+- Asymmetric editorial grid.
+- Different image sizes.
+- Alternating layouts.
+- Hover background transitions.
+- Smooth image scaling.
+- Text reveals on scroll.
+
+Do not make all three elements identical cards.
+
+## SECTION 05 — EDUCATION
+
+Headline:
+
+"Bildung schafft Zukunft."
+
+Present the free online education initiative.
+
+Use verified source information:
+- Online teaching.
+- Ukrainian teachers from the diaspora.
+- Different educational subjects.
+- Limited places.
+- Registration information.
+
+Present the content in a clear and visually attractive section.
+
+Use a prominent CTA only if a valid registration destination exists.
+
+Do not invent registration links or course dates.
+
+## SECTION 06 — PROJECTS
+
+Headline:
+
+"Was uns bewegt."
+
+Create a visual project showcase.
+
+Include existing project names where confirmed:
+
+- EDU4UA.
+- 100x Digital.
+- Interkulturelle Kochabende.
+- DILP.
+- Other projects verified on the source website.
+
+Design:
+- Asymmetric image gallery.
+- Different image sizes.
+- Editorial project titles.
+- Project metadata.
+- Image hover interactions.
+- Background color transitions based on project colors.
+- Smooth scroll reveal.
+
+Each project should be represented by a reusable JavaScript data object.
+
+The structure must make it easy to add more projects later.
+
+Do not invent project descriptions or outcomes.
+
+## SECTION 07 — COMMUNITY / PEOPLE
+
+Headline:
+
+"Vielfalt verbindet."
+
+Present the organization's multicultural community.
+
+Visual direction:
+- Large photographic collage.
+- Asymmetric layout inspired by Hadi Community.
+- Different image aspect ratios.
+- Short emotional text.
+- Subtle parallax.
+
+Prioritize genuine photographs of the organization and its activities.
+
+Avoid artificial stock-photo aesthetics.
+
+## SECTION 08 — NEWS / EVENTS
+
+Headline:
+
+"Einblicke in unsere Gemeinschaft."
+
+Show available news and events from the original website.
+
+Use:
+- Event date.
+- Title.
+- Image.
+- Short description.
+- Link to original content when available.
+
+If no verified news content is available, do not fabricate it.
+
+Create a reusable structure for future backend/CMS integration.
+
+## SECTION 09 — CALL TO ACTION
+
+Headline:
+
+"Gemeinsam können wir mehr erreichen."
+
+Present ways to participate:
+- Spenden.
+- Freiwilligenarbeit.
+- Partnerschaften.
+- Kontakt aufnehmen.
+
+Use existing and verified destinations only.
+
+Design:
+- Large typography.
+- Dark green or muted blue background.
+- Strong visual contrast.
+- Elegant button interactions.
+
+## SECTION 10 — FOOTER
+
+Include verified organization information:
+
+- Zusammen mit der Ukraine e.V.
+- Contact details.
+- Address.
+- Email.
+- Telephone.
+- Impressum.
+- Datenschutz.
+- Satzung, if available.
+- Social media links, if verified.
+
+Do not invent missing legal or contact information.
+
+# 5. MOTION DESIGN AND INTERACTIONS
+
+Use GSAP and GSAP ScrollTrigger.
+
+Animation level: RICH.
+
+Animations must feel premium, smooth and purposeful.
+
+## 5.1 Initial page load
+
+- Subtle hero entrance.
+- Headline reveals.
+- Images fade and slide into position.
+- Staggered timing.
+- Avoid long loading animations.
+
+The visitor must see the main content immediately.
+
+## 5.2 Mouse-responsive hero
+
+Implement:
+- Mouse position tracking.
+- Independent movement of image layers.
+- Different movement strengths.
+- Smooth easing.
+- Return-to-position animation.
+
+Use requestAnimationFrame or an equivalent efficient approach.
+
+The effect must be disabled on touch devices.
+
+## 5.3 Scroll-triggered animations
+
+Use ScrollTrigger for:
+- Headline reveals.
+- Image masks.
+- Staggered content entrances.
+- Statistic count-up.
+- Subtle parallax.
+- Section transitions.
+
+Avoid animating every single element.
+
+Animations must not interfere with normal scrolling.
+
+## 5.4 Project hover effects
+
+When hovering over a project:
+- Change the background to its assigned accent color.
+- Slightly scale the image.
+- Reveal supporting text or metadata.
+- Smoothly transition back on mouse leave.
+
+Use CSS custom properties for per-project colors.
+
+## 5.5 Buttons and links
+
+Implement:
+- Subtle hover transitions.
+- Smooth arrow movement.
+- Clear active states.
+- Accessible focus states.
+
+## 5.6 Performance
+
+- Avoid unnecessary event listeners.
+- Avoid expensive DOM operations.
+- Use transform and opacity where possible.
+- Avoid excessive blur and filter effects.
+- Use passive listeners when appropriate.
+- Use IntersectionObserver where suitable.
+- Clean up GSAP animations and listeners when necessary.
+
+## 5.7 Accessibility
+
+Respect:
+
+`prefers-reduced-motion: reduce`
+
+When enabled:
+- Disable parallax.
+- Disable nonessential animated transitions.
+- Display content immediately.
+- Keep all functionality available.
+
+# 6. TECHNICAL ARCHITECTURE
+
+IMPORTANT: The first version must work as a completely static website.
+
+No backend.
+No database.
+No server-side rendering.
+No build process.
+No npm requirement.
+
+Use exactly these three source files:
+
+1. index.html
+2. styles.css
+3. script.js
+
+An assets/images directory is permitted for local image files.
+
+Use:
+- HTML5.
+- CSS3.
+- Vanilla JavaScript (ES6+).
+- GSAP via CDN.
+- GSAP ScrollTrigger via CDN.
+- Google Fonts.
+
+Do not use React, Vue, Angular or a framework requiring compilation.
+
+Do not use TypeScript in this initial static version.
+
+Keep HTML, CSS and JavaScript separated.
+
+Use semantic HTML.
+
+Use reusable CSS classes and JavaScript functions.
+
+Use data-driven structures for projects and repeated content.
+
+Avoid inline JavaScript and inline styles unless strictly necessary.
+
+The site must work on GitHub Pages without a backend.
+
+Use relative asset paths.
+
+Do not use root-relative paths that break when the site is deployed under a GitHub Pages repository subpath.
+
+# 7. IMAGE STRATEGY
+
+Images are critical to the quality of this website.
+
+First inspect the original website and identify available photographs.
+
+Prioritize:
+1. Original organization photographs.
+2. Existing project photographs.
+3. Community and event photographs.
+4. Verified partner images.
+
+If additional images are necessary:
+- Use appropriate high-quality editorial photographs.
+- Select imagery relevant to education, community, cultural exchange and volunteering.
+- Do not use random decorative stock photography.
+- Do not present stock images as actual organization members or activities.
+
+Store local image assets in:
+
+assets/images/
+
+Use descriptive filenames.
+
+Use responsive image sizing and lazy loading for images below the fold.
+
+The hero image should load eagerly.
+
+Every image must have appropriate alt text.
+
+Do not leave broken images or empty image placeholders in the final presentation.
+
+# 8. RESPONSIVE DESIGN
+
+The website must be fully responsive.
+
+Desktop:
+- Full asymmetric layout.
+- Mouse interactions.
+- Multi-layer parallax.
+- Large typography.
+
+Tablet:
+- Simplified grid.
+- Reduced image movement.
+- Carefully adjusted typography.
+
+Mobile:
+- Single-column or carefully selected two-column compositions.
+- No mouse-dependent interactions.
+- Touch-friendly navigation.
+- No horizontal overflow.
+- Reduced parallax.
+- Readable text.
+- Minimum 44px interactive targets.
+
+Test at:
+- 1440px.
+- 1280px.
+- 1024px.
+- 768px.
+- 390px.
+- 375px.
+
+# 9. CONTENT AND DATA INTEGRITY
+
+The original website is the authoritative source.
+
+Extract and verify:
+- Organization description.
+- Mission.
+- Projects.
+- Activities.
+- Education information.
+- Contact details.
+- Legal links.
+- Existing statistics.
+- News and events.
+
+Write all public-facing content in German.
+
+Do not translate or rewrite factual information in a way that changes its meaning.
+
+Do not invent:
+- Statistics.
+- Dates.
+- Project results.
+- Team members.
+- Partner names.
+- Donations.
+- Testimonials.
+- Contact information.
+
+If information is missing, leave a clearly documented content field for later completion instead of fabricating it.
+
+Keep content structured so a future backend can replace static data without redesigning the frontend.
+
+# 10. FUTURE BACKEND COMPATIBILITY
+
+Although the current version is static, prepare the architecture for future integration.
+
+Separate content data from presentation logic.
+
+Make the following structures easy to replace with API responses later:
+- Projects.
+- News.
+- Events.
+- Statistics.
+- Team.
+- Partners.
+
+Do not implement fake forms that pretend to submit information.
+
+For the first version:
+- Email CTAs may use verified mailto links.
+- External links must point to real destinations.
+- Contact forms must clearly indicate that backend submission is not yet available, or remain absent until integration.
+
+Do not create fake success messages.
+
+# 11. SEO AND ACCESSIBILITY
+
+Implement:
+- German document language.
+- Proper page title.
+- Meta description.
+- Open Graph metadata.
+- Semantic heading hierarchy.
+- Descriptive link labels.
+- Image alt attributes.
+- Keyboard navigation.
+- Visible focus states.
+- Sufficient contrast.
+- Reduced motion support.
+
+Use a single H1.
+
+Avoid multiple H1 headings.
+
+# 12. DESIGN QUALITY CONTROL
+
+Before completing the implementation, perform a full visual and technical audit.
+
+Check:
+- Consistent colors.
+- Consistent typography.
+- Spacing.
+- Responsive behavior.
+- Hover states.
+- Scroll animations.
+- Mouse interactions.
+- Mobile navigation.
+- Reduced motion.
+- Image loading.
+- Broken links.
+- Console errors.
+- GitHub Pages compatibility.
+
+If Playwright or browser automation is available, use it to inspect the rendered website at multiple viewport sizes.
+
+Do not claim that a test passed unless it was actually executed.
+
+The result must not look like an AI-generated template.
+
+Avoid generic card layouts and default design patterns.
+
+# 13. REQUIRED WORKFLOW
+
+Follow this workflow strictly.
+
+### PHASE A — RESEARCH
+
+Before coding:
+1. Inspect the original website.
+2. Inspect all four design references.
+3. Extract the relevant content.
+4. Inspect existing image assets.
+5. Understand the layout and interaction patterns.
+
+### PHASE B — DESIGN SPECIFICATION
+
+Use the methodology from:
+
+https://github.com/xiaopu-ai/web-design
+
+If the web-design skill is installed in the local agent environment, read and follow its instructions.
+
+Create a design specification before implementation.
+
+The specification must define:
+- Visual direction.
+- Color palette.
+- Typography.
+- Layout.
+- Components.
+- Motion.
+- Responsive behavior.
+- Accessibility.
+- Design anti-patterns.
+
+The specification is a planning artifact. The final deployable source directory must contain only the three source files specified in Section 6, plus image assets.
+
+Do not start coding until the design direction has been internally established.
+
+### PHASE C — IMPLEMENTATION
+
+Create:
+- index.html
+- styles.css
+- script.js
+
+Implement the complete homepage.
+
+Do not stop after creating a hero section.
+
+All ten sections must be implemented.
+
+### PHASE D — TESTING
+
+Run the website locally using a local HTTP server.
+
+Test desktop, tablet and mobile.
+
+Fix all major visual and functional problems.
+
+Check that GitHub Pages can serve the website without a build process.
+
+### PHASE E — DELIVERY
+
+Provide:
+- All three source files.
+- Required image assets.
+- Instructions for local preview.
+- Instructions for GitHub Pages deployment.
+- List of external dependencies.
+- List of content that still requires client verification.
+
+# 14. FINAL ACCEPTANCE CRITERIA
+
+The project is complete only when:
+
+1. All ten homepage sections exist.
+2. The visual design follows the Balanced direction.
+3. The website is written entirely in German.
+4. The hero has working mouse interactions on desktop.
+5. Scroll animations work.
+6. Project hover color transitions work.
+7. The layout is responsive.
+8. Reduced motion is supported.
+9. All available original content is accurately represented.
+10. There are no fake statistics or fabricated information.
+11. No broken images or links remain.
+12. No critical console errors exist.
+13. The website runs on GitHub Pages without a build process.
+14. The three source files remain separate.
+15. The final result looks like a professionally designed creative agency website, not a generic nonprofit template.
+
+**IMPORTANT FINAL INSTRUCTION:**
+
+Prioritize design quality over implementation speed.
+
+Do not simplify the visual design into ordinary rectangular cards.
+
+Do not overuse animations.
+
+Create a coherent, elegant, human-centered digital experience.
+
+The website should feel alive, but remain calm, trustworthy, accessible and easy to navigate.
+
+## Environment and Network Restrictions
+
+You are operating inside an isolated Docker sandbox.
+
+Your only permitted external network access is through the configured AI API. Do not attempt to access external websites, GitHub, CDNs, package registries, or other internet services.
+
+### Workspace
+
+Work exclusively inside:
+
+`workspace/zusammen-website/`
+
+Create and maintain these files:
+
+- `index.html`
+- `styles.css`
+- `script.js`
+- `sassets/image/` and its subdirectories
+
+### Strict restrictions
+
+- Do NOT use Git.
+- Do NOT run git init, clone, pull, push, commit, or any other Git command.
+- Do NOT access GitHub.
+- Do NOT install npm packages or system dependencies.
+- Do NOT attempt to bypass network restrictions.
+- Do NOT modify Docker configuration, container settings, SSH configuration, or files outside the assigned workspace.
+- Do NOT create a build system or require a compilation step.
+- Do NOT use external JavaScript or CSS dependencies loaded from CDNs.
+- Do NOT rely on external images, fonts, or other resources being available at runtime.
+
+### Implementation requirements
+
+- Use plain HTML5, CSS3, and vanilla JavaScript (ES6+).
+- Implement animations with CSS and native JavaScript APIs where possible.
+- Use IntersectionObserver for scroll-triggered animations.
+- Use requestAnimationFrame for mouse interactions and parallax effects.
+- Use local assets wherever possible.
+- If a required external image, font, or other resource cannot be accessed, do not fabricate it or use a broken URL. Use an appropriate local fallback and document the missing resource.
+
+### Testing
+
+- Validate HTML, CSS, and JavaScript locally using available tools.
+- Run a local HTTP server if permitted.
+- Check all relative paths and asset references.
+- Test responsive layouts and reduced-motion behavior.
+- Do not attempt to publish, deploy, or upload anything.
+
+### Final deliverable
+
+Create the complete website directly in `workspace/zusammen-website/`.
+
+When finished, report:
+
+1. All files created.
+2. Implemented sections and interactions.
+3. Any missing external assets or content requiring human input.
+4. How to run the website locally.
+
+Do not create or modify files outside the assigned workspace.
+
